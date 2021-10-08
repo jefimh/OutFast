@@ -1,15 +1,15 @@
 ### Deadline
-This work should be completed before **Friday 6th November**.
+This work should be completed before **Friday 12th November**.
 
 ### Instructions
 For instructions on how to do and submit the assignment, please see the
-[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-20/course-instructions#assignments).
+[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-21/course-instructions#assignments).
 
 ### Preparation
 You must read and answer the questions in the OLI material:
 
-- Read [Module 8: Class Design](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=3f7e37a2ac1f08887dc6095c0ce2fb55)
-- If you have not done so, goto https://kth.oli.cmu.edu/, signup and register for the course key `dd1337-ht20`
+- Read [Module 8: Class Design](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=881a25faac1f0888540c3040b7165caa)
+- If you have not done so, goto https://kth.oli.cmu.edu/, signup and register for the course key `dd1337-ht21`
 
 You may wish to also read from _Objects First with Java_:
 - **5th edition:** Chapter 6
@@ -262,8 +262,7 @@ asked to **resubmit work if the documentation is of a poor standard**.
 
 ### Grading Criteria
 
-Each week we will communicate grading criteria through the [issue
-tracker](../../issues/). Grading criteria set the basic standards for a pass,
+Each week we will communicate grading criteria through the [issue tracker](../../issues/). Grading criteria set the basic standards for a pass,
 komp or fail, so it is essential you review them each week. These will change
 over time as your skills develop, so make sure you read the grading criteria
 issue carefully and tick off all the requirements.
