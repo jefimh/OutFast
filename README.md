@@ -1,268 +1,296 @@
-### Deadline
-This work should be completed before **Friday 12th November**.
+# Adventure awaits!
 
-### Instructions
+For this week's assignment, you will be creating a fully playable text-based game based on some code provided
+for you. As opposed to earlier tasks, you will be given greater freedom to use your creativity and will be able to
+showcase what you have learned so far in this course. 
+
+### 💀 Deadline
+This work should be completed before the exercise, on **Friday 10th September** depending on your group.
+
+### 👩‍🏫 Instructions
 For instructions on how to do and submit the assignment, please see the
 [assignments section of the course instructions](https://gits-15.sys.kth.se/inda-21/course-instructions#assignments).
 
-### Preparation
-You must read and answer the questions in the OLI material:
+### 📝 Preparation
 
-- Read [Module 8: Class Design](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=881a25faac1f0888540c3040b7165caa)
-- If you have not done so, goto https://kth.oli.cmu.edu/, signup and register for the course key `dd1337-ht21`
+You must read and answer the questions in the OLI material for Module 8.
 
-You may wish to also read from _Objects First with Java_:
-- **5th edition:** Chapter 6
-- **6th edition:** Chapter 8
+- Read [Module 8: class design & I/O](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=881a25faac1f0888540c3040b7165caa)
+- If you have not done so, goto [https://kth.oli.cmu.edu/](https://kth.oli.cmu.edu/), signup and register for the course key `dd1337-ht22`
 
-### GitHub Task
+### ✅ Learning Goals
+This week's learning goals include:
 
-### Basic Input / Output
+* Using data from files to instantiate objects
+* Designing classes
+* Programming creatively
 
-To warm up, we will use Java to read data from a file. File IO and Exceptions go
-well together as there are normally a lot of problems. Instead of just our own
-programs being a source of error, the format and contents of the data we read
-from file can be problematic. Keep that in mind when you get errors - it may be
-in the code, or it may be in the data - so check both.
+### 🚨 Troubleshooting Guide
+If you have any questions or problems, follow this procedure: <br/>
 
-#### Exercise IO.1 (use - `highscore`)
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-22/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when next lab is.
 
-The `highscore` project contains a program that will read in a file of player
-names and high scores and print them to the terminal. Read the source code and
-create a valid data file called `scores.txt` that the program can process. Pay
-attention to how each line is split in order to work out the correct format. The
-data file should contain 5 entries or more.
+We encourage you to discuss with your course friends, but **do not share answers**!
 
-#### Exercise IO.2 (use - `highscore`)
+### 🏛 Assignment
 
-Modify the program so that it also can read the country of the player. Modify
-your data file to include this extra field. Test that it still prints out all
-the entries correctly. The output should now be as follows:
-
+In the earlier days of computing, [text based adventure games](https://en.wikipedia.org/wiki/Interactive_fiction)
+were a popular form of entertainment, and captured the imagination of many budding programmers. In the [src](src) folder
+you can find some code for a very rudimentary game, and you should begin by playing and exploring this game.
+You can play the game by going to the [src](src) folder in your terminal and typing
+```bash
+javac Game.java
+java Game
 ```
-Player Alice from Sweden scored 10 points
+Once you have played the game and explored what you can do (which is not a lot) take a look in the source code 
+and try to understand how the game works. You don't need to understand everything, but the comments in the code should
+hopefully explain the most important parts. In the `parse` method of the `CommandParser` class you will also find
+a `switch` expression, which is a more compact way of writing branching code. You can find a summary of `switch` 
+expressions below.
+
+<details>
+<summary> 📚 Java switch expressions </summary>
+
+Writing a long chain of `if/else` statements can lead to code that is hard to read, and for this a
+switch expression is often a better choice. Instead of using a series of `if` statements such as 
+```java
+if (number == 1) {
+    System.out.println("Uno");
+} else if (number == 2) {
+    System.out.println("Dos");
+} else if (number == 3) {
+    System.out.println("Tres");
+} else {
+    System.out.println("Muchos");
+}
 ```
-
-#### Exercise IO.3 (use - `highscore`)
-
-Often when we read from files, we want to build objects from the data. Modify
-your program to make use of the `Player` class. You should create an empty
-`ArrayList<Player>`, read the player data from file, and create Player objects
-for each line of data. Add each Player object to the ArrayList.
-
-> Assistants Note: One challenge we face is that numbers in our data file are
-> read as String objects. However Player expects the score to be of type `int`.
-> If we need to convert the String "10" to the int 10, we can use the following:
-> Integer.parseInt("10")
-
-After the collection of players has been created, iterate over this collection
-using a for each loop and print out the high scores. Note a `toString()` method
-for player exists so you can take advantage of that to create the output.
-
-### Adventure Time
-
-This week, you shall be submitting a full game. This will be made somewhat
-easier as we shall be reusing the World of Zuul source code. It is important you
-read and execute the code provided in `src/game` and understand how it
-works. Then, you will create your own game scenario, design a world model, read
-this model from an input file, and extend your game with some suggested
-features. Finally you should ensure that your code is well documented using
-JavaDoc.
-
-We have added a main method to the `Game` class so you can run it outside of
-BlueJ. To run the game, compile the all the classes and execute the Game class:
-
-```
-$ javac *.java
-$ java Game
+you can use a `switch` expression of the form:
+```java
+switch (number) {
+    case 1 -> System.out.println("Uno"); // If number is one, print "uno" to the terminal
+    case 2 -> System.out.println("Dos");
+    case 3 -> System.out.println("Tres");
+    default -> System.out.println("Muchos"); // The default case will cover all other numbers
+}
 ```
 
-Or use your favorite IDE :-)
+The program will compare the value of `number` to each case, and if there is a match, the code to the right of `->`
+will be executed. In the code above, it is just a single method call, but it is possible to also include several lines 
+of code within `{}`, such as 
+```java
+case 1 -> {
+    System.out.println("Uno");
+    numberIsAPrime = false;
+}
+case 2 -> {
+    System.out.println("Dos");
+    numberIsAPrime = true;
+}
+// etc.
+```
 
-#### Exercise 6.3
+However, there are certain limitations to `switch` expressions compared to `if/else` statements. 
+The value on which to switch (`number` in the example above) must evaluate to a primitive type (such as `int`), 
+a `String` or an [enum type](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html). Furthermore, 
+the value after `case` must be a _constant_ such as `1` or `"hello"`, so it's not possible to add a case such as
+```java
+case (number < 1) -> System.out.println("Nada");
+```
+Finally, the cases must be _exhaustive_. A switch expression such as 
+```java
+switch (number) {
+    case 1 -> System.out.println("Uno");
+    case 2 -> System.out.println("Dos");
+}
+```
+will give rise to a compiler error, since there are cases not covered by the `switch` expression. To cover every case
+it is therefore common to include a `default` case at the end which will always be executed if no other `case` applies.
 
-Design your own game scenario. Do this away from the computer. Do not think
-about implementation, classes, or even programming in general. Just think about
-inventing an interesting game. The game can be anything that has as its base
-structure a player moving through different locations. Here are some examples:
+Java is a language that is constantly evolving and adding new features, so you might sometimes see older and slightly different
+`switch` code. The details of all different kinds of switches are beyond the scope of this course, but if you are
+interested you can also read about the older [switch statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html).
+</details>
 
-- You are a white blood cell traveling through the body in search of viruses to attack...
-- You are lost in a shopping mall and must find the exit...
-- You are a mole in its burrow and you cannot remember where you stored your food reserves before winter...
-- You are an adventurer who searches through a dungeon full of monsters and other characters...
-- You are from the bomb squad and must find and defuse a bomb before it goes off...
+#### Exercise 6.0 -- Loading a World Model from File  
+In the initial version of the [`Game.java`](src/Game.java) code, there is a method called `generateRooms` that creates
+the rooms that the player can move through. This works alright for a simple game, but it's not very convenient, since
+you will need to make changes to the code and recompile the whole game if you want to change the description 
+of a room.
 
-Make sure that your game has a goal (so that it has an end and the player can
-"win"). Try to think of many things to make the game interesting (trap doors,
-magic items, characters that help you only if you feed them, time limits...
-whatever you like). Let your imagination run wild.
+Having completed the IO exercises in previous tasks, you should be able to see the
+potential for storing the rooms for the game as a text file and creating Room objects from these descriptions. 
+In the `Game` class, create a new method with the header
+```java
+private void generateRoomsFromFile(String filename) 
+```
 
-### Base Game  (use - `game`)
-For the base game to be accepted, the following requirements must be met:
-
-* The game theme must be different from World of Zuul
-* Your game must have a _beginning_ and an _end_. That is to say, there must be
- one or more things the player can do that causes the game loop to exit.
-* The game world should have a minumum of 5 rooms
-* There must be a map of your game world in the [docs](docs) directory. You can
- use e.g. [draw.io](https://www.draw.io) for this, if you wish.
-* You must add the following information to the
-  [docs/README.md](docs/README.md) file:
-    - A description of the theme of your game.
-    - How to win/lose.
-    - Which feature(s) from [Extending World of Zuul](#extending-world-of-zuul)
-      you implemented and where they can be found in the game.
-
-### Loading a World Model from File
-
-#### Exercise IO.4  (use - `game`)
-
-Having completed the earlier IO exercises, you should be able to see the
-potential for storing world models for your game as a text file and creating
-Room objects from these descriptions. Add a new method
-`createRoomsFromFile(String filename)` that achieves this.
+This method should read information from a text file, and set up the game according to this information.
 
 One complication we must deal with is the order of creating rooms and then
-linking their exits. Whilst it is possible to include the room information and
-exits on a single line, it creates a parsing problem, where we create a Room
-object, but the corresponsing exit Rooms have not yet been created. The original
-`createRooms()` can act as a guide for a simple solution, where we create the rooms
+linking their exits. While it is possible to include the room information and
+exits on a single line, it creates a parsing problem, where we create a `Room`
+object, but the adjacent `Room`s that you can go to have not yet been created. The original
+`generateRooms()` can act as a guide for a simple solution, where we create the rooms
 first, then assign the exits. To solve this we can prefix lines in our file and
-test with a conditional as we read them. For example:
+test with a conditional as we read them. 
 
-```
+1. First, add all rooms. These should be listed in the file as `TYPE;ROOM_NAME;DESCRIPTION`
+2. Second, add the exits to the rooms. These should be listed in the file as: `TYPE;FROM;DIRECTION;TO`
+
+For example:
+
+```java
+// TYPE; ROOM_NAME; DESCRIPTION
 Room,Name1,Description1
 Room,Name2,Description2
+// TYPE; FROM; DIRECTION; TO
 Exit,Name1,East,Name2
 Exit,Name2,West,Name1
 ```
 
-As long as we list all the rooms first, then all the exits, we can build and
-link the world model of the game. A rough guide for the method is provided
-below. Perhaps you can also spot an opportunity to optimise the number of lines
-required in the file?
+As long as you first define all rooms, and then all the exits, you can build and link the world model of the game. 
+Below you can see an outline of how the method could be written.
+
+<details>
+    <summary> 🛠 Method outline </summary>
 
 ```java
-void createRoomsFromFile(String filename) {
-  // create a HashMap<String, Room> worldModel to store the game world as it is read from file
-
-  // while there are more lines in the file, read line
-  // if line starts with "Room" then extract the Name and Description and
-  // create a Room instance and
-  // add it to the HashMap, using Name as the key
-
-  // else if the line starts with "Exit" assume the necessary rooms exist in the HashMap and
-  // use the setExit() method to link Rooms together
-  // hint: this requires us to acces the HashMap twice like:
-  // worldModel.get("Name1").setExit("East", worldmodel.get("Name2"));
-
-  // remember to set the currentRoom to the starting room as the final step
-  // you can chose to hardcode this room for convenience or
-  // modify the logic above to assume the first room is the starting point
+private void generateRoomsFromFile(String filename) {
+    // create a HashMap<String, Room> worldModel to store the game world as it is read from file
+        
+    // Open the file with the room data  
+    // While there are more lines in the file, read the next line
+    // If the line starts with "Room" then extract the Name and Description 
+    // Create a Room with this information and add it to the HashMap, using Name as the key
+    
+    // Else if the line starts with "Exit" assume the necessary rooms exist in the HashMap and
+    // use the addExit() method of the Room class to link Rooms together
+    // Hint: this requires us to acces the HashMap twice like:
+    // worldModel.get("subway").addExit("north", worldmodel.get("borggarden"));
+    
+    // Remember to set the currentRoom of the GameState class to the starting room as the final step
+    // You can either give the starting room the name "start"
+    // or modify the logic above to assume the first room is the starting point
 }
 ```
 
-Remember to include a sample world model file in the repo.
+</details>
 
-> Assistants Note: One curious thing to think about is how if we declare the
-> worldModel as a local variable in this method, we do not expect it to persist
-> for the rest of the game, as it cannot be accessed outside of this scope. So
-> if it gets garbage collected, how do our rooms still exist? The same thing
-> applied to the original version as all the Room variables were local to the
-> createRooms method...
+We have provided you with a [text file](/src/rooms.txt) which matches the rooms set up in the `generateRooms` method.
+Use this file to make sure that your code works correctly and that the game is still playable.
 
-### Extending World of Zuul (use - `game`)
-After you have finished improving your game, choose **one or more** features
-listed below to implement.
+> **Assistant's note:** If you wonder where to begin, have a look at how you read a file line by line in task-7. 
+> The only difference should be that the "delimiter" in this case should be a semicolon (`;`) as opposed to a blank space.
 
-#### Option 1
-Add some form of time limit to your game. If a certain task is not completed in
-a specified time, the player loses. A time limit can easily be implemented by
-counting the number of moves or the number of entered commands. You do not need
-to use real time.
+#### Exercise 6.1 -- Game design
+Now it's time to redesign the existing game to something a bit more fun. Start by creating your own game scenario. 
+Do this away from the computer. Don't worry about implementation, classes, or even programming in general, 
+just think about inventing an interesting game that you'd like to play. The game can be anything that has as its core 
+concept a player moving through different locations. Here are some examples:
 
-#### Option 2
-Implement a trapdoor somewhere (or some other form of door that you can only
-cross one way).
+<details>
+<summary> 🛠 Ideas for game concepts </summary>
 
-#### Option 3
-Add a beamer to the game. A beamer is a device that can be charged and fired.
-When you charge the beamer, it memorizes the current room. When you fire the
-beamer, it transports you immediately back to the room it was charged in. The
-beamer could either be standard equipment or an item that the player can find.
-Of course, you need commands to charge and fire the beamer.
+- You are trying to find your way to an exam. The doors are closing soon, but you are lost in the M building.
+- You are at campus at midnight, and must run to the subway while a monster is chasing you.
+- You are lost in a shopping mall and must find the exit.
+- You are on a field trip and must find a bathroom. 
+- You are lost in a hypercube and must teleport your way out.
+- You are from the bomb squad and must find and defuse a bomb before it goes off.
+- You are an adventurer who searches through a dungeon full of monsters and other characters.
+- You are a cat, lost and alone in a cyber city, and must find your cat family.
+</details>
 
-#### Option 4
-Add locked doors to your game. The player needs to find (or otherwise obtain) a
-key to open a door.
+You are completely free to design any text based game you want. However, in order for this to be a good programming 
+task we also have some practical requirements that you need to take into consideration, you can read these below 
+in _Exercise 6.2_. 
 
-#### Option 5
-Add a transporter room. Whenever the player enters this room, he/she is
-randomly transported into one of the other rooms. Note: Coming up with a good
-design for this task is not trivial. It might be interesting to discuss design
-alternatives for this with other students.
+You do not need to submit anything for this exercise, but it's a good idea to write down what you have planned and
+draw a map of the game world using pen and paper or your favorite drawing program before you start writing code.
 
-#### Option 6
-In the processCommand method in Game, there is a switch statement (or a
-sequence of if statements) to dispatch commands when a command word is
-recognized. This is not a very nice design, because every time we add a
-command, we have to add a case here. Can you improve this design? Design the
-classes so that handling of commands is more modular and new commands can be
-added more easily. Implement it. Test it.
+#### Exercise 6.2 -- Implementing your design
+Once you have settled on a game you want to create, it's time to implement this in Java.
+You should work based on the existing game code in the [src](src) folder, but are free to modify this code in any way you 
+like. You may find that your initial game concept is too ambitious or difficult, so keep iterating on your design as you work.
 
-#### Option 7
-Add characters to the game. Characters are similar to items, but they can talk.
-They speak some text when you first meet them, and they may give you some help
-if you give them the right item.
+Your game _must_ fulfill these basic requirements:
+1. You are not allowed to reuse any of the rooms from the first version of the game (you are allowed to design a game
+   that takes place at KTH, but you need to create your own rooms and layout).
+2. The rooms must be read from a file using the `generateRoomsFromFile` method you created in _Exercise 6.0_. 
+2. It must be possible to win and loose the game by taking (or failing to take) specific game actions. Once the game
+   is over the game loop should end and a different message should be printed depending on if the player won or lost.
+3. You must create at least one new class and use this class in your game. This class could for instance be
+   used to model items that the player can pick up, keys required for certain doors, monsters that the player can fight
+   or any other thing you can think of.
+5. The game world should have a minimum of 5 rooms.
+6. In order to make it easier for your TA to test your game, you must add a map of your game world in the
+   [docs](docs) directory. This can be in the form of a photo or scan of a hand drawn map, or created using software
+   such as [diagrams.net](https://app.diagrams.net/).
+7. You must add the following information to the [docs/README.md](docs/README.md) file:
+    - A description of the theme of your game.
+    - How to win/lose.
+    - What class or classes you chose to create and how this is used in the game.
 
-#### Option 8
-Add moving characters. These are like other characters, but every time the
-player types a command, these characters can move into an adjoining room.
 
-### Documenting your code
+If you get stuck at any point or would like help to solve a particular problem, remember to follow the steps of the
+🚨 Troubleshooting Guide.
 
-#### Exercise 6.XX
+> **Assistant's note:** It's quite easy to get carried away and want to create a huge and complex game,
+> but we would recommend that you try to keep it somewhat simple. It's better to create a smaller, well-designed
+> game instead of a huge game that is full of bugs. However, if you have the time there is no limit to what features
+> you can add to this project.
 
-Using Javadoc, write the class documentation for __all__  of your classes (for
-example the `highscore` project has no docs! fix it). First, briefly review the
-**Format of a Doc Comment** and **Example of Doc Comments** sections from the
-[official
-documentation](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
-on Javadoc from Oracle. Then go through your classes and add Javadoc according
-to the requirements below.
+### Exercise 6.3 -- Creating documentation
+You should already have read the documentation for the classes and methods in the original game classes,
+and it should hopefully be evident to you how useful documentation can be for understanding code.
+Now it's time to add your own class and method documentation comments. 
+
+Using Javadoc, write the class documentation for all the `public` classes and methods that you have created or modified.
+First, briefly review the **Format of a Doc Comment** and **Example of Doc Comments** sections from the
+[official documentation](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
+on Javadoc from Oracle. Then go through your classes and add Javadoc according to the requirements below:
+
+<details>
+<summary> 📚 What to add to a class Javadoc comment </summary>
 
 **The documentation of a class should at least include:**
-* a comment describing the overall purpose and characteristics of the class
-* a version number (use `@version`)
-* the author’s name (or authors’ names) (use `@author`)
-* documentation for each `public` constructor and method. Methods/constructors
-  with other visibility (`protected`, `private`, `package private`) are in
-  general only Javadoced if they are complex and require an explanation, or
-  part of some larger machinery that is not obvious.
+* A comment describing the overall purpose and characteristics of the class.
+* The author’s name, prefixed with the `@author` tag. If there are several authors, you should give each a separate 
+line. If you have modified a file which already has an author, make sure to add your own name as well.
+</details>
 
-**The documentation for each constructor and method should include:**
-* a description of the purpose and function of the method
-* name and description of each parameter (use `@param`)
-* a description of the value returned (use `@return`). Note that this is not
-  applicable to constructors and `void` methods.
-* getters and setters are in general trivial, but the field they correspond to
-  may not be. it is reasonable to describe the purpose of the field, rather
-  than what the method does (because it should in most cases be magnificently
-  obvious).
-* **Note:** The types of parameters and return values should **not** be written
-  in the Javadoc, as these are already in the method/constructor header!
+<details>
+<summary> 📚 What to add to a method Javadoc comment </summary>
 
-**For examples of good Javadoc, see the files you have been provided in
-the [src](src) directory**
+**The documentation of a method or constructor should at least include:**
+* A description of the purpose and function of the method.
+* Name and description of each parameter (use the `@param` tag). The types of parameters and return values should 
+**not** be written in the Javadoc, as these are already in the method/constructor header!
+* A description of the value returned (use the `@return` tag). Note that this is not applicable to constructors and `void` methods.
+* If the method throws an exception, it should be explained what will cause the method to do this (use the `@throws` tag).
 
-Good Javadoc will become a **minimum requirement** in documentation of future
-assignments where you have created your own class, so absolute care must be
-taken to understand correct style of documentation.  Otherwise, you may be
-asked to **resubmit work if the documentation is of a poor standard**.
+Getters and setters are in general trivial, but the field they correspond to may not be. It is reasonable to describe 
+the purpose of the field, rather han what the method does (it should in most cases be obvious that a setter updates a 
+value).
 
-### Grading Criteria
+In general, methods/constructors that are not `public` (such as ones with access modifier `protected`, `private` or
+`package private`) are usually only given Javadoc comments if they are complex and require an explanation, 
+or part of some larger machinery that is not obvious.
+</details>
 
-Each week we will communicate grading criteria through the [issue tracker](../../issues/). Grading criteria set the basic standards for a pass,
-komp or fail, so it is essential you review them each week. These will change
-over time as your skills develop, so make sure you read the grading criteria
-issue carefully and tick off all the requirements.
+For examples of good Javadoc, see the files you have been provided in the [src](src) directory. Good Javadoc will 
+become a **minimum requirement** in all future assignments in this and subsequent courses, whenever you have created or modified a class.
+You may be asked to **resubmit work if the documentation is of a poor standard**. It can be a good habit to 
+always double-check so that all your code is properly documented before you create a git commit.
+
+### 🐞 Bugs and errors?
+If you find any inconsistencies (spelling errors, grammatically incorrect sentences et c) or errors in this exercise, please open a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new) with the title "Task *x* Error: *summary of error here*". Found bugs will be rewarded by mentions in the acknowledgment section.
+
+### 🙏 Acknowledgment
+This task was designed by                <br>
+[Linus Östlund](mailto:linusost@kth.se)  <br>
+[Sofia Bobadilla](mailto:sofbob@kth.se)  <br>
+[Gabriel Skoglund](mailto:gabsko@kth.se) <br>
+[Arvid Siberov](mailto:asiberov@kth.se)  <br>

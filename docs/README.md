@@ -1,10 +1,8 @@
-# Game Documentation
+### Game description
+> Add a description of your game here.
 
-### Theme
-Describe the theme of your game (remove this line!).
+### How to win and loose
+> Add a description of how to win the game, and how to lose it.
 
-### How to win/lose
-Describe the path to victory and/or defeat (remove this line!).
-
-### Extensions
-List the extension features you implemented and where (remove this line!).
+### Classes added to the game
+> Explain what class or classes you added to the game, and how these are used in the game.
