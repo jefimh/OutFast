@@ -1,21 +1,20 @@
 # Adventure awaits!
-
 For this week's assignment, you will be creating a fully playable text-based game based on some code provided
 for you. As opposed to earlier tasks, you will be given greater freedom to use your creativity and will be able to
 showcase what you have learned so far in this course. 
 
 ### 💀 Deadline
-This work should be completed before the exercise, on **Friday 10th September** depending on your group.
+This work should be completed before the exercise on **Friday 11th November**.
 
 ### 👩‍🏫 Instructions
 For instructions on how to do and submit the assignment, please see the
-[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-21/course-instructions#assignments).
+[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-22/course-instructions#assignments).
 
 ### 📝 Preparation
 
 You must read and answer the questions in the OLI material for Module 8.
 
-- Read [Module 8: class design & I/O](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=881a25faac1f0888540c3040b7165caa)
+- Read [Module 8: class design & I/O](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=f5e5a844ac1f0888463713430160cea9)
 - If you have not done so, goto [https://kth.oli.cmu.edu/](https://kth.oli.cmu.edu/), signup and register for the course key `dd1337-ht22`
 
 ### ✅ Learning Goals
@@ -30,20 +29,24 @@ If you have any questions or problems, follow this procedure: <br/>
 
 1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-22/help/issues). Are other students asking about your problem?
 2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
-3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when next lab is.
+3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
 
 We encourage you to discuss with your course friends, but **do not share answers**!
 
 ### 🏛 Assignment
-
 In the earlier days of computing, [text based adventure games](https://en.wikipedia.org/wiki/Interactive_fiction)
 were a popular form of entertainment, and captured the imagination of many budding programmers. In the [src](src) folder
 you can find some code for a very rudimentary game, and you should begin by playing and exploring this game.
-You can play the game by going to the [src](src) folder in your terminal and typing
+You can play the game by going to the [src](src) folder in your terminal and typing:
 ```bash
 javac Game.java
 java Game
 ```
+
+> **Assistant's note:** If you have a version of Java less that 14 then you will get a compile error linked to the Switch 
+> statement in `CommandParser.java` (see below). Ric did when he tested this code. The solution is to goto https://www.oracle.com/java/technologies/downloads/
+>  and update your runtime. You can always check your version of Java in the terminal by typing `$ java --version`
+
 Once you have played the game and explored what you can do (which is not a lot) take a look in the source code 
 and try to understand how the game works. You don't need to understand everything, but the comments in the code should
 hopefully explain the most important parts. In the `parse` method of the `CommandParser` class you will also find
