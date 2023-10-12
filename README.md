@@ -4,18 +4,21 @@ for you. As opposed to earlier tasks, you will be given greater freedom to use y
 showcase what you have learned so far in this course. 
 
 ### 💀 Deadline
-This work should be completed before the exercise on **Friday 11th November**.
+This work should be completed before the exercise on **Friday 10 November**.
+
+**Important note** Due to this deadline, please think twice before creating your own game. It easily becomes very difficult to finish what you set out to do, so it might be better to start small so that you have something ready to hand in if you run out of time. If you do multiple commits during your development cycle you can later go back to a previous commit if you are not done by the deadline. 
 
 ### 👩‍🏫 Instructions
 For instructions on how to do and submit the assignment, please see the
-[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-22/course-instructions#assignments).
+[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-23/course-instructions#assignments).
 
 ### 📝 Preparation
 
-You must read and answer the questions in the OLI material for Module 8.
+- Read and answer all questions in Module 8: [Class Design](https://qbl.sys.kth.se/sections/dd1337_ht23_programmering_prog/preview/container/class_design_amp_io)
+- You can access the OLI material by
+  1. logging in via Canvas (see the [OLI Torus SE](https://canvas.kth.se/courses/41415/external_tools/4247) link in the left menu)
+  2. Then start reading [Class Design](https://qbl.sys.kth.se/sections/dd1337_ht23_programmering_prog/preview/container/class_design_amp_io)
 
-- Read [Module 8: class design & I/O](https://kth.oli.cmu.edu/jcourse/webui/syllabus/module.do?context=f5e5a844ac1f0888463713430160cea9)
-- If you have not done so, goto [https://kth.oli.cmu.edu/](https://kth.oli.cmu.edu/), signup and register for the course key `dd1337-ht22`
 
 ### ✅ Learning Goals
 This week's learning goals include:
@@ -27,14 +30,14 @@ This week's learning goals include:
 ### 🚨 Troubleshooting Guide
 If you have any questions or problems, follow this procedure: <br/>
 
-1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-22/help/issues). Are other students asking about your problem?
-2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-23/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
 3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
 
 We encourage you to discuss with your course friends, but **do not share answers**!
 
 ### 🏛 Assignment
-In the earlier days of computing, [text based adventure games](https://en.wikipedia.org/wiki/Interactive_fiction)
+In the earlier days of computing, [text-based adventure games](https://en.wikipedia.org/wiki/Interactive_fiction)
 were a popular form of entertainment, and captured the imagination of many budding programmers. In the [src](src) folder
 you can find some code for a very rudimentary game, and you should begin by playing and exploring this game.
 You can play the game by going to the [src](src) folder in your terminal and typing:
@@ -43,13 +46,13 @@ javac Game.java
 java Game
 ```
 
-> **Assistant's note:** If you have a version of Java less that 14 then you will get a compile error linked to the Switch 
+> **Assistant's note:** If you have a version of Java less than 14 then you will get a compile error linked to the Switch 
 > statement in `CommandParser.java` (see below). Ric did when he tested this code. The solution is to goto https://www.oracle.com/java/technologies/downloads/
 >  and update your runtime. You can always check your version of Java in the terminal by typing `$ java --version`
 
-Once you have played the game and explored what you can do (which is not a lot) take a look in the source code 
+Once you have played the game and explored what you can do (which is not a lot) take a look at the source code 
 and try to understand how the game works. You don't need to understand everything, but the comments in the code should
-hopefully explain the most important parts. In the `parse` method of the `CommandParser` class you will also find
+hopefully explain the most important parts. In the `parse` method of the `CommandParser` class, you will also find
 a `switch` expression, which is a more compact way of writing branching code. You can find a summary of `switch` 
 expressions below.
 
@@ -118,7 +121,7 @@ interested you can also read about the older [switch statement](https://docs.ora
 
 #### Exercise 6.0 -- Loading a World Model from File  
 In the initial version of the [`Game.java`](src/Game.java) code, there is a method called `generateRooms` that creates
-the rooms that the player can move through. This works alright for a simple game, but it's not very convenient, since
+the rooms that the player can move through. This works all right for a simple game, but it's not very convenient, since
 you will need to make changes to the code and recompile the whole game if you want to change the description 
 of a room.
 
@@ -197,16 +200,16 @@ concept a player moving through different locations. Here are some examples:
 <summary> 🛠 Ideas for game concepts </summary>
 
 - You are trying to find your way to an exam. The doors are closing soon, but you are lost in the M building.
-- You are at campus at midnight, and must run to the subway while a monster is chasing you.
+- You are at campus at midnight and must run to the subway while a monster is chasing you.
 - You are lost in a shopping mall and must find the exit.
 - You are on a field trip and must find a bathroom. 
 - You are lost in a hypercube and must teleport your way out.
 - You are from the bomb squad and must find and defuse a bomb before it goes off.
 - You are an adventurer who searches through a dungeon full of monsters and other characters.
-- You are a cat, lost and alone in a cyber city, and must find your cat family.
+- You are a cat, lost and alone in a cyber city, and must find your cat's family.
 </details>
 
-You are completely free to design any text based game you want. However, in order for this to be a good programming 
+You are completely free to design any text-based game you want. However, in order for this to be a good programming 
 task we also have some practical requirements that you need to take into consideration, you can read these below 
 in _Exercise 6.2_. 
 
@@ -215,21 +218,21 @@ draw a map of the game world using pen and paper or your favorite drawing progra
 
 #### Exercise 6.2 -- Implementing your design
 Once you have settled on a game you want to create, it's time to implement this in Java.
-You should work based on the existing game code in the [src](src) folder, but are free to modify this code in any way you 
+You should work based on the existing game code in the [src](src) folder but are free to modify this code in any way you 
 like. You may find that your initial game concept is too ambitious or difficult, so keep iterating on your design as you work.
 
 Your game _must_ fulfill these basic requirements:
 1. You are not allowed to reuse any of the rooms from the first version of the game (you are allowed to design a game
    that takes place at KTH, but you need to create your own rooms and layout).
 2. The rooms must be read from a file using the `generateRoomsFromFile` method you created in _Exercise 6.0_. 
-2. It must be possible to win and loose the game by taking (or failing to take) specific game actions. Once the game
+3. It must be possible to win and lose the game by taking (or failing to take) specific game actions. Once the game
    is over the game loop should end and a different message should be printed depending on if the player won or lost.
-3. You must create at least one new class and use this class in your game. This class could for instance be
-   used to model items that the player can pick up, keys required for certain doors, monsters that the player can fight
+4. You must create at least one new class and use this class in your game. This class could for instance be
+   used to model items that the player can pick up, keys required for certain doors, monsters that the player can fight,
    or any other thing you can think of.
 5. The game world should have a minimum of 5 rooms.
 6. In order to make it easier for your TA to test your game, you must add a map of your game world in the
-   [docs](docs) directory. This can be in the form of a photo or scan of a hand drawn map, or created using software
+   [docs](docs) directory. This can be in the form of a photo or scan of a hand-drawn map, or created using software
    such as [diagrams.net](https://app.diagrams.net/).
 7. You must add the following information to the [docs/README.md](docs/README.md) file:
     - A description of the theme of your game.
@@ -237,7 +240,7 @@ Your game _must_ fulfill these basic requirements:
     - What class or classes you chose to create and how this is used in the game.
 
 
-If you get stuck at any point or would like help to solve a particular problem, remember to follow the steps of the
+If you get stuck at any point or would like help solving a particular problem, remember to follow the steps of the
 🚨 Troubleshooting Guide.
 
 > **Assistant's note:** It's quite easy to get carried away and want to create a huge and complex game,
@@ -261,7 +264,7 @@ on Javadoc from Oracle. Then go through your classes and add Javadoc according t
 **The documentation of a class should at least include:**
 * A comment describing the overall purpose and characteristics of the class.
 * The author’s name, prefixed with the `@author` tag. If there are several authors, you should give each a separate 
-line. If you have modified a file which already has an author, make sure to add your own name as well.
+line. If you have modified a file that already has an author, make sure to add your own name as well.
 </details>
 
 <details>
@@ -279,7 +282,7 @@ the purpose of the field, rather han what the method does (it should in most cas
 value).
 
 In general, methods/constructors that are not `public` (such as ones with access modifier `protected`, `private` or
-`package private`) are usually only given Javadoc comments if they are complex and require an explanation, 
+`package private`) are usually only given Javadoc comments if they are complex and require an explanation 
 or part of some larger machinery that is not obvious.
 </details>
 
@@ -288,8 +291,37 @@ become a **minimum requirement** in all future assignments in this and subsequen
 You may be asked to **resubmit work if the documentation is of a poor standard**. It can be a good habit to 
 always double-check so that all your code is properly documented before you create a git commit.
 
+
+### ❎ Checklist 
+- [ ] Update to Java 14 or higher.
+- [ ] Checkout the game and source code.
+- [ ] Create rooms and exits as text files which can then be imported into the game using `private void generateRoomsFromFile(String filename)`.
+- [ ] Come up with an own game idea that utilizes the already existing code. 
+- [ ] Code your game and follow these instructions:
+  - [ ] You have not reused any of the rooms from the first version of the game (but the game can still take place at KTH!).
+  - [ ] The rooms must be read from a file using the `generateRoomsFromFile` method you created in _Exercise 6.0_. 
+  - [ ] It is possible to win and lose the game by taking (or failing to take) specific game actions. 
+  - [ ] The game loop should ends on game over with a different message depending on if the player win or lose.
+  - [ ] You have created at least one new class and used it in your game.
+  - [ ] The game world have at least 5 rooms.
+  - [ ] Add a map of your game world in the [docs](docs) directory. This can be in the form of a photo or scan of a hand-drawn map, or created using software such as [diagrams.net](https://app.diagrams.net/).
+  - [ ] Add the following information to the [docs/README.md](docs/README.md) file:
+    - A description of the theme of your game.
+    - How to win/lose.
+    - What class or classes you chose to create and how this is used in the game.
+- [ ] Add Javadoc documentation to your files containing:
+  - [ ] A comment describing the overall purpose and characteristics of the class.
+  - [ ] The author’s name, prefixed with the `@author` tag. If there are several authors, you should give each a separate line. If you have modified a file that already has an author, make sure to add your own name as well.
+- [ ] Add Javadoc documentation to your methods and constructors containing:
+  - [ ] A description of the purpose and function of the method.
+  - [ ] Name and description of each parameter (use the `@param` tag). The types of parameters and return values should **not** be written in the Javadoc, as these are already in the method/constructor header!
+  - [ ] A description of the value returned (use the `@return` tag). Note that this is not applicable to constructors and `void` methods.
+  - [ ] If the method throws an exception, it should be explained what will cause the method to do this (use the `@throws` tag).
+    
+> **Assistant's Note:** We've set up a checklist for you. Use it for a last look at your work before handing it in. You don't have to, but if you want to check off tasks, just put an "x" in the brackets in the README.md file.
+
 ### 🐞 Bugs and errors?
-If you find any inconsistencies (spelling errors, grammatically incorrect sentences et c) or errors in this exercise, please open a [New Issue](https://gits-15.sys.kth.se/inda-22/help/issues/new) with the title "Task *x* Error: *summary of error here*". Found bugs will be rewarded by mentions in the acknowledgment section.
+If you find any inconsistencies (spelling errors, grammatically incorrect sentences etc) or errors in this exercise, please open a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new) with the title "Task *x* Error: *summary of error here*". Found bugs will be rewarded by mentions in the acknowledgment section.
 
 ### 🙏 Acknowledgment
 This task was designed by                <br>
@@ -297,3 +329,7 @@ This task was designed by                <br>
 [Sofia Bobadilla](mailto:sofbob@kth.se)  <br>
 [Gabriel Skoglund](mailto:gabsko@kth.se) <br>
 [Arvid Siberov](mailto:asiberov@kth.se)  <br>
+[Alexander Runebou](mailto:alerun@kth.se)<br>
+    
+Proofreading & Bug fixes by <br>
+[Jesper Lindeberg ]()   <br>
