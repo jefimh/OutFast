@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------
+OutFast - TEXT BASED ADVENTURE GAME
+-------------------------------------------------------------------------
+
+[Your consciousness flickers back like a dimly lit candle in a vast darkness. 
+Memories slowly stitch themselves together - you are an investigative 
+journalist, driven by the whispers of scandal at Mount Dark Asylum. The 
+moments leading up to this point, however, remain blurred and lost.]
+
+[As your eyes struggle against the darkness, they catch a faint, flickering light 
+above. Every inch of your body aches, hinting at a fall from a great height, but 
+the details are frustratingly vague. You shift slightly, and a sharp pain in your 
+back brings a stifled groan to your lips.]
+
+[Suddenly, a figure materializes from the shadows, his presence both eerie and 
+intriguing. He is an older man, with a worn face marked by deep lines of age or 
+stress. His eyes, intense yet distant, fix upon you. A simple robe drapes over his 
+frame, giving him the air of a religious figure. In his hand, he holds a candle, 
+its light casting an otherworldly glow on his features.]
+
+FIGURE: "And who are you then?"
+
+[Your throat is dry, making speech difficult.]
+
+[The figure steps forward, his movements deliberate. He regards you with a mix 
+of curiosity and solemnity, then speaks with a voice that resonates against the 
+stone walls.]
+
+FIGURE: "I see, merciful God, you have sent me an apostle. Guard your life, son. 
+You have a calling."
+
+[With those cryptic words, the man turns away, his figure retreating into the 
+dark corridors of the asylum, leaving you in the shadow of his proclamation.]
+
+[The room spins with unspoken questions and fears, but above all, a pressing 
+need for survival looms. You must get out of this dangerous and scary place safely]
+
+-----------------------------------------------------------
+OBJECTIVE: Escape the asylum. Access security control room 
+to unlock the main doors. After that, head to the exit. 
+-----------------------------------------------------------

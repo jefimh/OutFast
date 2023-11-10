@@ -6,16 +6,24 @@
  * and other relevant information.
  *
  * @author Gabriel Skoglund
+ * 
+ * @author Jefim Holmgren
  */
 public class GameState {
     private Room currentRoom;
+    private String currentDecisionNodeId;
 
     /**
      * Create a new GameState with the player starting in the given room
      * @param startingRoom the room the player starts in.
      */
-    public GameState(Room startingRoom) {
+    public GameState(Room startingRoom, String currentDecisionNodeId) {
         currentRoom = startingRoom;
+        this.currentDecisionNodeId = currentDecisionNodeId;
+    }
+
+    public String getCurrentDecisionNodeId() {
+        return currentDecisionNodeId;
     }
 
     /**
@@ -31,5 +39,9 @@ public class GameState {
      */
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
+    }
+
+    public void setCurrentDecisionNodeId(String currentDecisionNodeId) {
+        this.currentDecisionNodeId = currentDecisionNodeId;
     }
 }

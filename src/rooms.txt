@@ -1,13 +1,14 @@
-Room;start;You are at the Tekniska Högskolan subway station. You look around for someone handing out free samples, but there don't seem to be any today.
-Room;borggarden;You are outside in borggården, there is a cold wind blowing.
-Room;f1;You are in the main F1 lecture hall, there is a very advanced math lecture going on. You don't understand anything.
-Room;e43;You are in an empty classroom in the E building. Someone has written "I love INDA" on the blackboard
-Room;gul;You are in the Gul computer lab. Someone has left a computer running with a halfway finished INDA assignment open in the editor. You are tempted to look but manage to resist the urge.
-Exit;start;north;borggarden
-Exit;borggarden;north;f1
-Exit;borggarden;west;e43
-Exit;borggarden;south;start
-Exit;f1;south;borggarden
-Exit;e43;east;borggarden
-Exit;e43;up;gul
-Exit;gul;down;e43
+Room;Main Hall;You stand in the cavernous main hall of Mount Dark Asylum. Dust dances in the few shafts of light piercing through the boarded-up windows. Papers litter the floor, and an old wheelchair sits oddly angled to one side. An old man, his eyes wide and unseeing, rocks back and forth, clutching something close to his chest.
+Room;Security Control;The security control room is claustrophobic, the air stale. A bank of monitors casts a flickering light over rows of abandoned desks. Each screen is a portal to another part of the asylum, but the images are distorted, almost mocking. A figure hunches over the control panel, his fingers moving with a mind of their own.
+Room;Patient Wards;This once bustling patient ward is now a gallery of abandonment. Beds are overturned, the faded and torn curtains fluttering in a non-existent breeze. Echoes of despair seem to emanate from the walls. In the corner, a woman in tattered nurses' attire cradles a bundle of papers as if they were a newborn.
+Room;Administration Office;The administration office is a snapshot of chaos halted in time. Desks are overturned, and a thick layer of dust covers the floor. Amidst the disarray, one island of order remains: a clear space on the wall where someone has been writing. A figure in a lab coat, now smeared with stains of dubious origin, scribbles furiously.
+Room;Records Room;The records room is a labyrinth of forgotten histories, shelves upon shelves of files and documents that spill onto the floor. The air is thick with the must of paper and the sharp tang of mold. Dim light filters through a cracked ceiling tile, illuminating a figure hunched over a tattered journal, oblivious to your presence.
+Room;Corridor;The corridor is a narrow artery of the asylum, its walls lined with peeling paint and the remnants of old fixtures. Flickering lights cast an unsettling glow, barely piercing the oppressive darkness. The sound of dripping water echoes in the distance, and the air carries a faint, unidentifiable odor. A shadowy figure moves with jerky, inhuman motions further down the hallway, as if pulled by strings.
+Exit;Main Hall;north;Patient Wards
+Exit;Main Hall;east;Administration Office
+Exit;Main Hall;west;Corridor
+Exit;Patient Wards;south;Main Hall
+Exit;Administration Office;west;Main Hall
+Exit;Corridor;east;Main Hall
+Exit;Corridor;south;Security Control
+Exit;Security Control;north;Corridor
