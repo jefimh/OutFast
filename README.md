@@ -1,9 +1,13 @@
-# OutFast - Horror Adventure Game
+# OutFast - Horror Adventure Game  🎮
 
-## Overview
+## Overview 🌟
 OutFast is a text-based horror adventure game inspired by Outlast 1. Players navigate through Mount Dark Asylum, making crucial decisions that determine their survival and uncover the facility's dark history through interactive cutscenes.
 
-## Game Description
+## Demo 📺
+
+![OutFast Gameplay](/demo.gif)
+
+## Game Description 
 In OutFast, players regain consciousness inside Mount Dark Asylum and must escape by locating the security room to unlock the main exit gate. While exploring, players encounter various cutscenes that reveal the asylum's disturbing past. These narrative elements are optional, allowing players to choose their path through the facility. Each decision can lead to different outcomes, including successful progression, game over scenarios, or alternative endings.
 
 ## Level Layout
@@ -23,7 +27,7 @@ The primary objective is reaching and successfully navigating the Security Room 
 6. Path Exploration
 7. Hidden Exit Discovery (Victory Condition)
 
-## Technical Implementation
+## Technical Implementation 🛠️
 
 ### Core Classes
 
